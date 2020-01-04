@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     image: cible
     ports: 
-      - "22:22"
+      - "2222:22"
 
   ansible:
     build:
