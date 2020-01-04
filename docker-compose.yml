@@ -14,5 +14,5 @@ services:
       context: ./ansible
       dockerfile: Dockerfile
     image: ansible
-    volume: 
+    volumes: 
       - ./project:/tmp
