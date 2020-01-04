@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  cible:
+    build:
+      context: ./cible
+      dockerfile: Dockerfile
+    image: cible
+    ports: 
+      - "22:22"
+
+  ansible:
+    build:
+      context: ./ansible
+      dockerfile: Dockerfile
+    image: ansible
+    volume: 
+      - ./project:/tmp
