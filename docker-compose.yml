@@ -16,3 +16,6 @@ services:
     image: ansible
     volumes: 
       - ./project:/tmp
+    command: ["/home/script_init.sh"]
+    links:
+      - cible
