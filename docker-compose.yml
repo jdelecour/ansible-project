@@ -8,6 +8,7 @@ services:
     image: cible
     ports: 
       - "2222:22"
+      - "8080:80"
 
   ansible:
     build:
