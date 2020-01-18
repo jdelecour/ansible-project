@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: yes
   tasks:
     - name: ensure nginx is at the latest version
       apt: 
@@ -8,4 +9,3 @@
     
     - name: start nginx
       command: service nginx start
-      become: yes

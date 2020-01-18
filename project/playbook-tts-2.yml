@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: yes
   tasks:
     - name: ensure nginx is at the latest version
       apt: 
@@ -8,9 +9,18 @@
     
     - name: start nginx
       command: service nginx start
-      become: yes
 
     - name: install mysql
       apt:
         name: mysql-server
         state: latest
+
+    - name: start mysql
+      command: service mysql start
+
+    - name: "Create log tree"
+      file:
+        path: "/tmp/logs"
+        state: directory
+        owner: root
+        group: root
