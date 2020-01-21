@@ -32,3 +32,14 @@
         owner: root
         group: root
         mode: '0644'
+
+    - name: "Import New Welcome Page with your name"
+      template:
+        src: templates/index.html
+        dest: /var/www/html/index.html
+      vars:
+        name: 'Jules'
+
+
+
+
